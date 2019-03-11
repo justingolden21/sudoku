@@ -1,0 +1,22 @@
+add url links to puzzle
+
+enter custom puzzle difficulty
+
+track number of puzzles shared
+
+use cookies to remember puzzle and progress
+
+add timer, share api for linking to puzzle saying "I solved this in X seconds, can you?"
+
+add puzzle difficulty to info modal:
+
+"easy":         62
+"medium":       53
+"hard":         44
+"very-hard":    35
+"insane":       26
+"inhuman":      17
+
+add link to github repo and sudoku.js
+
+update readme

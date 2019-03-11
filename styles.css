@@ -1,7 +1,15 @@
-body, input {
+body, input, button {
+	color: #333;
 	text-align: center;
 	font-family: Arial;
 }
+::-moz-selection {
+	background: #ccc !important;
+}
+::selection {
+	background: #ccc !important;
+}
+
 input {
 	width: 60px;
 	height: 60px;
@@ -20,12 +28,6 @@ input.won {
 input:disabled.invalid, input:disabled.won {
 	color: #fff;
 }
-/*.input-row input:nth-child(3n) {*/
-/*.input-row:nth-child(3n+2) input {*/
-/*input:nth-child(3n+2) {*/
-/*.input-row:nth-of-type(3n) {
-	background-color: #f00;
-}*/
 .border-bottom {
 	border-bottom: 3px solid #666 !important;
 }
@@ -33,18 +35,21 @@ input:disabled.invalid, input:disabled.won {
 	border-right: 3px solid #666 !important;
 }
 
-::-moz-selection {
-	background: #ccc !important;
-	/*color: #fff;*/
-}
-::selection {
-	background: #ccc !important;
-	/*color: #fff;*/
-}
-
 button {
 	padding: 10px;
 	font-size: 150%;
 	background-color: #e6e6e6;
 	border: 3px solid #ccc;
+	margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+	input {
+		width: 30px;
+		height: 30px;
+		font-size: 150%;
+	}
+	button {
+		padding: 5px;
+	}
 }

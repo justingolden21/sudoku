@@ -1,3 +1,7 @@
+//https://github.com/robatron/sudoku.js/blob/master/sudoku.js
+
+let puzzle;
+
 $(function() {
 
 	makeBoard();
@@ -20,16 +24,41 @@ $(function() {
 	$('#hard-btn').click(function() {
 		setDifficulty('hard');
 	});
+	$('#very-hard-btn').click(function() {
+		setDifficulty('very-hard');
+	});
+	$('#insane-btn').click(function() {
+		setDifficulty('insane');
+	});
+	$('#inhuman-btn').click(function() {
+		setDifficulty('inhuman');
+	});
+
+	$('#solve-btn').click(solve);
+	$('#reset-btn').click(reset);
+	$('#print-btn').click(function() {
+		window.print();
+	});
 
 	$('#easy-btn').click();
 
 });
 
 function setDifficulty(difficulty) {
-	setBoard(sudoku.board_string_to_grid(sudoku.generate(difficulty) ) );
-	$('	input').removeClass('invalid');
+	puzzle = sudoku.generate(difficulty);
+	setBoard(sudoku.board_string_to_grid(puzzle) );
+	$('input').removeClass('invalid won');
 }
 
+function solve() {
+	let solution = sudoku.solve(puzzle);
+	setBoard(sudoku.board_string_to_grid(solution), false );
+	$('input').addClass('won').removeClass('invalid');
+}
+function reset() {
+	setBoard(sudoku.board_string_to_grid(puzzle) );
+	$('input').removeClass('invalid won');
+}
 
 function makeBoard() {
 	for(let x=0; x<9; x++) {

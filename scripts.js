@@ -35,6 +35,8 @@ $(function() {
 		setDifficulty('hard');
 	});
 
+	$('#easy-btn').click();
+
 });
 
 function setDifficulty(difficulty) {

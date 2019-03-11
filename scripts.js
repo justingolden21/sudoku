@@ -67,6 +67,8 @@ function makeBoard() {
 			let cssClass = '';
 			if(x==2 || x==5) cssClass += ' border-bottom';
 			if(y==2 || y==5) cssClass += ' border-right';
+			if(x==3 || x==6) cssClass += ' border-top';
+			if(y==3 || y==6) cssClass += ' border-left';
 			$('#sudoku-div').append('<input id="s' + x + '-' + y + '" class="' + cssClass + '" type="number" min="1" max="9" required>');
 		}
 		$('#sudoku-div').append('</div>');

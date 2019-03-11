@@ -20,3 +20,5 @@ add puzzle difficulty to info modal:
 add link to github repo and sudoku.js
 
 update readme
+
+include option to change font

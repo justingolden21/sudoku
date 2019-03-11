@@ -1,8 +1,9 @@
 body, input, button {
 	color: #333;
 	text-align: center;
-	font-family: 'Permanent Marker', cursive;
-	/*font-family: Arial;*/
+	/*font-family: 'Permanent Marker', cursive;*/
+	/*font-family: 'Gloria Hallelujah', cursive;*/
+	font-family: 'Orbitron', sans-serif;
 }
 ::-moz-selection {
 	background: #ccc !important;

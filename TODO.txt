@@ -22,3 +22,5 @@ add link to github repo and sudoku.js
 update readme
 
 include option to change font
+
+onload focus the first non disabled input

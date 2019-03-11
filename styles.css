@@ -16,31 +16,34 @@ input {
 	width: 60px;
 	height: 60px;
 	font-size: 200%;
-	border: 3px solid #ccc;
+	border: 3px solid #999;
+	font-weight: light;
+	color: #000;
 }
 input:disabled {
-	font-weight: bold;
+	font-weight: 900;
+	color: #666;
 }
 input.invalid {
-	background: #c66;
+	background: #f99;
 }
 input.won {
-	background: #6c6;
+	background: #9f9;
 }
 input:disabled.invalid, input:disabled.won {
-	color: #fff;
+	color: #666;
 }
 .border-bottom {
-	border-bottom: 3px solid #666 !important;
+	border-bottom: 3px solid #333 !important;
 }
 .border-right {
-	border-right: 3px solid #666 !important;
+	border-right: 3px solid #333 !important;
 }
 .border-top {
-	border-top: 3px solid #666 !important;
+	border-top: 3px solid #333 !important;
 }
 .border-left {
-	border-left: 3px solid #666 !important;
+	border-left: 3px solid #333 !important;
 }
 
 button {

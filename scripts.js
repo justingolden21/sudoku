@@ -1,6 +1,7 @@
 //https://github.com/robatron/sudoku.js/blob/master/sudoku.js
 
 let puzzle;
+let linkParams = false;
 
 $(function() {
 
@@ -40,7 +41,10 @@ $(function() {
 		window.print();
 	});
 
-	$('#easy-btn').click();
+
+	setupLinkButton();
+
+	checkLoadLink();
 
 });
 
@@ -91,6 +95,7 @@ function setBoard(vals, setDisabled=true) {
 			}
 		}
 	}
+	handleLink();
 }
 
 function getVal(posY, posX) {

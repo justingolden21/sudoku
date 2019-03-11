@@ -1,11 +1,6 @@
 $(function() {
-	// make the board
+
 	makeBoard();
-
-	// set the board
-	// reset();
-
-	// $('#s0-2').select();
 
 	$('input').change(function() {
 		checkValids();
@@ -15,15 +10,6 @@ $(function() {
 			$('input').removeClass('won');
 		}
 	});
-
-	// $('#solution-btn').click(function() {
-	// 	setSolution();
-	// 	$('input').addClass('won');
-	// });
-
-	// $('#reset-btn').click(function() {
-	// 	reset();
-	// });
 
 	$('#easy-btn').click(function() {
 		setDifficulty('easy');
@@ -57,36 +43,6 @@ function makeBoard() {
 		$('#sudoku-div').append('</div>');
 	}	
 }
-
-
-// function setSolution() {
-// 	setBoard([
-// 		'534678912'.split(''),
-// 		'672195348'.split(''),
-// 		'198342567'.split(''),
-// 		'859761423'.split(''),
-// 		'426853791'.split(''),
-// 		'713924856'.split(''),
-// 		'961537284'.split(''),
-// 		'287419635'.split(''),
-// 		'345286179'.split('')
-// 	], false);	
-// }
-
-// function reset() {
-// 	setBoard([
-// 		['5','3',' ',' ','7',' ',' ',' ',' '],
-// 		['6',' ',' ','1','9','5',' ',' ',' '],
-// 		[' ','9','8',' ',' ',' ',' ','6',' '],
-// 		['8',' ',' ',' ','6',' ',' ',' ','3'],
-// 		['4',' ',' ','8',' ','3',' ',' ','1'],
-// 		['7',' ',' ',' ','2',' ',' ',' ','6'],
-// 		[' ','6',' ',' ',' ',' ','2','8',' '],
-// 		[' ',' ',' ','4','1','9',' ',' ','5'],
-// 		[' ',' ',' ',' ','8',' ',' ','7','9']
-// 	], true);
-// 	// todo: make it work, checking for blanks in set board makes it ignore blanks, but we don't want to disable blanks either
-// }
 
 function setBoard(vals, setDisabled=true) {
 	for(let x=0; x<9; x++) {

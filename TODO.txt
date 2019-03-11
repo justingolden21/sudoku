@@ -24,3 +24,5 @@ update readme
 include option to change font
 
 onload focus the first non disabled input
+
+icon and favicon, mobile theme colors, more meta elements in html head

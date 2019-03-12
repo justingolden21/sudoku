@@ -1,3 +1,5 @@
+option to print out a certain number of puzzles, for example 100
+
 add url links to puzzle
 
 enter custom puzzle difficulty

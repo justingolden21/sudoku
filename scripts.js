@@ -7,33 +7,32 @@ $(function() {
 
 	makeBoard();
 
-	$('input').change(function() {
+	$('input:not([type="checkbox"])').change( ()=> {
 		if($(this).val()<1 || $(this).val()>9)
 			$(this).val('');
 		checkValids();
-		if(checkWon() ) {
+		if(checkWon() )
 			$('input').addClass('won');
-		} else {
+		else
 			$('input').removeClass('won');
-		}
 	});
 
-	$('#easy-btn').click(function() {
+	$('#easy-btn').click( ()=> {
 		setDifficulty('easy');
 	});
-	$('#medium-btn').click(function() {
+	$('#medium-btn').click( ()=> {
 		setDifficulty('medium');
 	});
-	$('#hard-btn').click(function() {
+	$('#hard-btn').click( ()=> {
 		setDifficulty('hard');
 	});
-	$('#very-hard-btn').click(function() {
+	$('#very-hard-btn').click( ()=> {
 		setDifficulty('very-hard');
 	});
-	$('#insane-btn').click(function() {
+	$('#insane-btn').click( ()=> {
 		setDifficulty('insane');
 	});
-	$('#inhuman-btn').click(function() {
+	$('#inhuman-btn').click( ()=> {
 		setDifficulty('inhuman');
 	});
 
@@ -88,14 +87,12 @@ function setBoard(vals, setDisabled=true) {
 		for(y=0; y<9; y++) {
 			if(vals[x][y] != '.') {
 				$('#s' + x + '-' + y).val(vals[x][y]);
-				if(setDisabled) {
+				if(setDisabled)
 					$('#s' + x + '-' + y).prop('disabled', 'true');
-				}
 			} else {
 				$('#s' + x + '-' + y).val('');
-				if(setDisabled) {
+				if(setDisabled)
 					$('#s' + x + '-' + y).prop('disabled', '');
-				}	
 			}
 		}
 	}
@@ -110,22 +107,18 @@ function getVal(posY, posX) {
 function getSurroundingNums(posY, posX) {
 	let surrounding = [];
 	for(let i=0; i<9; i++) {
-		if(i!=posX) { // avoid given
+		if(i!=posX) // avoid given square
 			surrounding.push(getVal(posY, i) ); // horizontal
-		}
-		if(i!=posY) { // avoid given
+		if(i!=posY) // avoid given square
 			surrounding.push(getVal(i, posX) ) // vertical
-		}
 	}
 
 	let areaX = Math.floor(posX / 3);
 	let areaY = Math.floor(posY / 3);
 	for(let x=3*areaX; x<3*areaX+3; x++) {
 		for(let y=3*areaY; y<3*areaY+3; y++) {
-			if(x != posX || y != posY) { // avoid given
+			if(x != posX || y != posY) // avoid given square
 				surrounding.push(getVal(y, x) );
-			}
-
 		}
 	}
 
@@ -142,11 +135,10 @@ function isValid(posY, posX) {
 function checkValids() {
 	for(let x=0; x<9; x++) {
 		for(y=0; y<9; y++) {
-			if(isValid(x, y) ) {
+			if(isValid(x, y) )
 				$('#s' + x + '-' + y).removeClass('invalid');
-			} else {
+			else
 				$('#s' + x + '-' + y).addClass('invalid');
-			}
 		}
 	}
 }

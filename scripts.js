@@ -1,6 +1,7 @@
 //https://github.com/robatron/sudoku.js/blob/master/sudoku.js
 
-let puzzle;
+let puzzle, d;
+const difficulties = 'easy medium hard very-hard insane inhuman'.split(' ');
 
 $(function() {
 	makeBoard();
@@ -16,7 +17,6 @@ $(function() {
 	});
 
 	// make difficulty btns
-	let difficulties = 'easy medium hard very-hard insane inhuman'.split(' ');
 	for(let i = 0; i < difficulties.length; i++) {
 		let name = capitalize(difficulties[i].replace('-',' ') );
 		$('#difficulty-div').append('<button title="' + 'Generate a new puzzle with ' + name + ' difficulty"' 
@@ -24,7 +24,7 @@ $(function() {
 	}
 
 	$('#solve-btn').click(solve);
-	$('#reset-btn').click(reset);
+	$('#clear-btn').click(reset);
 	$('#print-btn').click( ()=> window.print() );
 
 	setupLinkButton();
@@ -41,6 +41,7 @@ function setDifficulty(difficulty) {
 	setBoard(sudoku.board_string_to_grid(puzzle) );
 	$('.square').removeClass('invalid won');
 	$('#difficulty-span').html(capitalize(difficulty.replace('-',' ') ) );
+	d = difficulties.indexOf(difficulty);
 }
 
 function solve() {
@@ -82,7 +83,8 @@ function setBoard(vals, setDisabled=true) {
 			}
 		}
 	}
-	handleLink();
+	if(linkParams)
+		createLink();
 }
 
 function getVal(posY, posX) {

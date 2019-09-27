@@ -24,7 +24,7 @@
 </head>
 <body>
 
-<h1><img src="img/icon-256.png" width="96px">Sudoku</h1>
+<h1><img src="img/icon-256.png" width="72px">Sudoku</h1>
 
 <h3>Generate a new puzzle:</h3>
 <div id="difficulty-div"></div>
@@ -33,10 +33,33 @@
 <div id="sudoku-div"></div>
 <br>
 
-<button id="reset-btn">Reset</button>
-<button id="solve-btn">Solve</button>
-<button id="print-btn">Print</button>
-<button id="link-btn">Get Link</button>
+<button id="clear-btn">
+	<svg id="i-trash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+		<path d="M28 6 L6 6 8 30 24 30 26 6 4 6 M16 12 L16 24 M21 12 L20 24 M11 12 L12 24 M12 6 L13 2 19 2 20 6" />
+	</svg>
+	Clear
+</button>
+<button id="solve-btn">
+	<svg id="i-eye" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+		<circle cx="17" cy="15" r="1" />
+		<circle cx="16" cy="16" r="6" />
+		<path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z" />
+	</svg>
+	Solve
+</button>
+<button id="print-btn">
+	<svg id="i-print" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+		<path d="M7 25 L2 25 2 9 30 9 30 25 25 25 M7 19 L7 30 25 30 25 19 Z M25 9 L25 2 7 2 7 9 M22 14 L25 14" />
+	</svg>
+	Print
+</button>
+
+<button id="link-btn">
+	<svg id="i-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+		<path d="M18 8 C18 8 24 2 27 5 30 8 29 12 24 16 19 20 16 21 14 17 M14 24 C14 24 8 30 5 27 2 24 3 20 8 16 13 12 16 11 18 15" />
+	</svg>
+	<span id="link-span">Get Link</span>
+</button>
 
 <br><br>
 <input id="show-invalid-checkbox" type="checkbox">

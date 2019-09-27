@@ -8,19 +8,18 @@ function setPuzzle(puz) {
 	setBoard(sudoku.board_string_to_grid(puzzle) );
 }
 
-function handleLink() {
-	if(linkParams)
-		history.replaceState({}, '', '?p=' + getPuzzle() );
+function createLink() {
+	history.replaceState({}, '', '?p=' + getPuzzle() + '&d=' + d);
 }
 function setupLinkButton() {
 	$('#link-btn').click( ()=> {
 		linkParams = !linkParams;
 		if(linkParams) {
-			$('#link-btn').html('Remove link');
-			history.replaceState({}, '', '?p=' + getPuzzle() );
+			$('#link-span').html('Remove link');
+			createLink();
 		}
 		else {
-			$('#link-btn').html('Get link');
+			$('#link-span').html('Get link');
 			window.history.replaceState(null, null, window.location.pathname);
 		}
 	});
@@ -28,10 +27,12 @@ function setupLinkButton() {
 function checkLoadLink() {
 	let url = new URL(window.location.href);
 	let p = url.searchParams.get('p');
+	d = url.searchParams.get('d');
 	if(p) {
 		setPuzzle(p);
 		linkParams = true;
-		$('#link-btn').html('Remove link');
+		$('#link-span').html('Remove link');
+		$('#difficulty-span').html(capitalize(difficulties[d].replace('-',' ') ) );
 	}
 	else {
 		setDifficulty('easy');

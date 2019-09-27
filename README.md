@@ -16,6 +16,8 @@ Play it here: https://justingolden21.github.io/sudoku/
 
 Made with [Sudoku.js](https://github.com/robatron/sudoku.js/blob/master/sudoku.js)
 
+Made with [Bytesize Icons](https://github.com/danklammer/bytesize-icons)
+
 Made by Justin Golden
 
 Github: https://github.com/justingolden21/

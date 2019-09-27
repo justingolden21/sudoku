@@ -39,6 +39,10 @@ change focus color or outline width
 
 option for onscreen keyboard buttons for numbers 1-9
 
+night mode? fullscreen button?
+
+should get link button copy to clipboard and show toast?
+
 add timer, share api for linking to puzzle saying "I solved this in X seconds, can you?"
 
 add google analytics

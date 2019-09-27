@@ -1,70 +1,56 @@
 //https://github.com/robatron/sudoku.js/blob/master/sudoku.js
 
 let puzzle;
-let linkParams = false;
 
 $(function() {
-
 	makeBoard();
 
-	$('input:not([type="checkbox"])').change( ()=> {
+	$('.square').change(function() {
 		if($(this).val()<1 || $(this).val()>9)
 			$(this).val('');
 		checkValids();
 		if(checkWon() )
-			$('input').addClass('won');
+			$('.square').addClass('won');
 		else
-			$('input').removeClass('won');
+			$('.square').removeClass('won');
 	});
 
-	$('#easy-btn').click( ()=> {
-		setDifficulty('easy');
-	});
-	$('#medium-btn').click( ()=> {
-		setDifficulty('medium');
-	});
-	$('#hard-btn').click( ()=> {
-		setDifficulty('hard');
-	});
-	$('#very-hard-btn').click( ()=> {
-		setDifficulty('very-hard');
-	});
-	$('#insane-btn').click( ()=> {
-		setDifficulty('insane');
-	});
-	$('#inhuman-btn').click( ()=> {
-		setDifficulty('inhuman');
-	});
+	// make difficulty btns
+	let difficulties = 'easy medium hard very-hard insane inhuman'.split(' ');
+	for(let i = 0; i < difficulties.length; i++) {
+		let name = capitalize(difficulties[i].replace('-',' ') );
+		$('#difficulty-div').append('<button title="' + 'Generate a new puzzle with ' + name + ' difficulty"' 
+			+ 'onclick="setDifficulty(\'' + difficulties[i] + '\')"">' + name + '</button>');
+	}
 
 	$('#solve-btn').click(solve);
 	$('#reset-btn').click(reset);
 	$('#print-btn').click( ()=> window.print() );
 
 	setupLinkButton();
-
 	checkLoadLink();
 
 	$('#show-invalid-checkbox').change( ()=> {
 		let displayInvalid = $('#show-invalid-checkbox').is(':checked');
 		$('#invalid-css').prop('href', displayInvalid ? 'invalid.css' : ' ');
 	});
-
 });
 
 function setDifficulty(difficulty) {
 	puzzle = sudoku.generate(difficulty);
 	setBoard(sudoku.board_string_to_grid(puzzle) );
-	$('input').removeClass('invalid won');
+	$('.square').removeClass('invalid won');
+	$('#difficulty-span').html(capitalize(difficulty.replace('-',' ') ) );
 }
 
 function solve() {
 	let solution = sudoku.solve(puzzle);
 	setBoard(sudoku.board_string_to_grid(solution), false );
-	$('input').addClass('won').removeClass('invalid');
+	$('.square').addClass('won').removeClass('invalid');
 }
 function reset() {
 	setBoard(sudoku.board_string_to_grid(puzzle) );
-	$('input').removeClass('invalid won');
+	$('.square').removeClass('invalid won');
 }
 
 function makeBoard() {
@@ -76,7 +62,7 @@ function makeBoard() {
 			if(y==2 || y==5) cssClass += ' border-right';
 			if(x==3 || x==6) cssClass += ' border-top';
 			if(y==3 || y==6) cssClass += ' border-left';
-			$('#sudoku-div').append('<input id="s' + x + '-' + y + '" class="' + cssClass + '" type="number" min="1" max="9" required>');
+			$('#sudoku-div').append('<input id="s' + x + '-' + y + '" class="square' + cssClass + '" type="number" min="1" max="9" required>');
 		}
 		$('#sudoku-div').append('</div>');
 	}	
@@ -145,5 +131,9 @@ function checkValids() {
 
 function checkWon() {
 	// no invalid inputs, no empty inputs
-	return $('.invalid').length==0 && $('input:invalid').length==0;
+	return $('.invalid').length==0 && $('.square:invalid').length==0;
+}
+
+function capitalize(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
 }

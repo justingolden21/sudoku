@@ -1,18 +1,14 @@
-generate buttons dynamically for difficulty
+==== TODO ====
 
 option to print out a certain number of puzzles, for example 100
 
-add url links to puzzle
+onload focus the first non disabled input
 
-enter custom puzzle difficulty
+icon and favicon, mobile theme colors, more meta elements in html head
 
-track number of puzzles shared
+==== NOTES ====
 
-use cookies to remember puzzle and progress
-
-add timer, share api for linking to puzzle saying "I solved this in X seconds, can you?"
-
-add puzzle difficulty to info modal:
+puzzle difficuty:
 
 "easy":         62
 "medium":       53
@@ -21,14 +17,22 @@ add puzzle difficulty to info modal:
 "insane":       26
 "inhuman":      17
 
-add link to github repo and sudoku.js
+==== MODAL ====
 
-update readme
+add link to github repo and sudoku.js
 
 include option to change font
 
-onload focus the first non disabled input
+enter custom puzzle difficulty
 
-icon and favicon, mobile theme colors, more meta elements in html head
+option to use cookies to remember puzzle and progress
+
+==== MAYBE LATER ====
 
 option for onscreen keyboard buttons for numbers 1-9
+
+add timer, share api for linking to puzzle saying "I solved this in X seconds, can you?"
+
+add google analytics
+
+make it a PWA

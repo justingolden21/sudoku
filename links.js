@@ -1,5 +1,7 @@
+let linkParams = false;
+
 function getPuzzle() {
-	return puzzle.replace(/\./g, '0'); // replace periods with 0s for urls
+	return puzzle.replace(/\./g, '0'); // replace periods with 0s for URLs
 }
 function setPuzzle(puz) {
 	puzzle = puz.replace(/0/g, '\.'); // replace 0s with periods for setBoard
@@ -14,11 +16,11 @@ function setupLinkButton() {
 	$('#link-btn').click( ()=> {
 		linkParams = !linkParams;
 		if(linkParams) {
-			$(this).html('Remove link');
+			$('#link-btn').html('Remove link');
 			history.replaceState({}, '', '?p=' + getPuzzle() );
 		}
 		else {
-			$(this).html('Get link');
+			$('#link-btn').html('Get link');
 			window.history.replaceState(null, null, window.location.pathname);
 		}
 	});
@@ -29,5 +31,5 @@ function checkLoadLink() {
 	if(p)
 		setPuzzle(p);
 	else
-		$('#easy-btn').click();
+		setDifficulty('easy');
 }

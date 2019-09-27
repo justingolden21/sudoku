@@ -1,4 +1,4 @@
-body, input, button {
+body, .square, button {
 	color: #333;
 	text-align: center;
 	font-family: 'Orbitron', sans-serif;
@@ -10,7 +10,11 @@ body, input, button {
 	background: #ccc !important;
 }
 
-input {
+input[type=checkbox] {
+	width: 20px;
+	height: 20px;
+}
+.square {
 	width: 60px;
 	height: 60px;
 	font-size: 200%;
@@ -18,14 +22,14 @@ input {
 	font-weight: light;
 	color: #000;
 }
-input:disabled {
+.square:disabled {
 	font-weight: 900;
 	color: #666;
 }
-input.won {
+.square.won {
 	background: #6c6;
 }
-input:disabled.invalid, input:disabled.won {
+.square:disabled.invalid, .square:disabled.won {
 	color: #666;
 }
 .border-bottom {
@@ -54,7 +58,7 @@ button:hover {
 }
 
 @media only screen and (max-width: 768px) {
-	input {
+	.square {
 		width: 30px;
 		height: 30px;
 		font-size: 150%;

@@ -18,13 +18,8 @@
 <h1>Sudoku</h1>
 
 <h3>Generate a new puzzle:</h3>
-<button id="easy-btn">Easy</button>
-<button id="medium-btn">Medium</button>
-<button id="hard-btn">Hard</button>
-<button id="very-hard-btn">Very Hard</button>
-<button id="insane-btn">Insane</button>
-<button id="inhuman-btn">Inhuman</button>
-<br><br>
+<div id="difficulty-div"></div>
+<h3>Current difficulty: <span id="difficulty-span"></span></h3>
 
 <div id="sudoku-div"></div>
 <br>
@@ -33,10 +28,11 @@
 <button id="solve-btn">Solve</button>
 <button id="print-btn">Print</button>
 <button id="link-btn">Get Link</button>
-<br>
 
+<br><br>
 <input id="show-invalid-checkbox" type="checkbox">
 <label for="show-invalid-checkbox">Show Invalid Squares</label>
+
 
 </body>
 </html>

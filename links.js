@@ -7,12 +7,11 @@ function setPuzzle(puz) {
 }
 
 function handleLink() {
-	if(linkParams) {
+	if(linkParams)
 		history.replaceState({}, '', '?p=' + getPuzzle() );
-	}
 }
 function setupLinkButton() {
-	$('#link-btn').click(function() {
+	$('#link-btn').click( ()=> {
 		linkParams = !linkParams;
 		if(linkParams) {
 			$(this).html('Remove link');
@@ -27,9 +26,8 @@ function setupLinkButton() {
 function checkLoadLink() {
 	let url = new URL(window.location.href);
 	let p = url.searchParams.get('p');
-	if(p) {
+	if(p)
 		setPuzzle(p);
-	} else {
+	else
 		$('#easy-btn').click();
-	}
 }

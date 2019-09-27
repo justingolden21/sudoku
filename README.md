@@ -1,6 +1,8 @@
 # Sudoku
 
-https://justingolden21.github.io/sudoku/
+<img src="img/icon-256.png" width="96px">
+
+Play it here: https://justingolden21.github.io/sudoku/
 
 * Play Sudoku for free without ads
 

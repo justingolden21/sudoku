@@ -1,26 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 <style type="text/css">
-	.st0{fill:#333333;stroke:#333333;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st1{fill:#CCCCCC;stroke:#333333;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st2{fill:#333333;stroke:#CCCCCC;stroke-width:1.4142;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.st0{fill:#333;stroke:#333;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.st1{fill:#ccc;stroke:#333;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.st2{fill:#333;stroke:#ccc;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;}
 </style>
-<rect x="4" y="24" class="st0" width="20.5" height="32.5"/>
-<rect x="4" y="4" class="st0" width="52.5" height="20"/>
-<rect x="8.5" y="7.5" class="st1" width="16" height="17"/>
-<rect x="24.5" y="7.5" class="st1" width="16" height="17"/>
-<rect x="40.5" y="7.5" class="st1" width="16" height="17"/>
-<rect x="8.5" y="23.5" class="st1" width="16" height="17"/>
-<rect x="24.5" y="23.5" class="st1" width="16" height="17"/>
-<rect x="40.5" y="23.5" class="st1" width="16" height="17"/>
-<rect x="8.5" y="39.5" class="st1" width="16" height="17"/>
-<rect x="24.5" y="39.5" class="st1" width="16" height="17"/>
-<rect x="40.5" y="39.5" class="st1" width="16" height="17"/>
-<g>
-	<polygon class="st2" points="40,24 44,16 48,24 48,48 40,48 	"/>
-	<line class="st2" x1="40" y1="24" x2="48" y2="24"/>
-	<line class="st2" x1="40" y1="40" x2="48" y2="40"/>
-</g>
+<rect x="4" y="4" class="st0" width="52" height="52"/>
+
+<rect x="8" y="8" class="st1" width="16" height="16"/>
+<rect x="24" y="8" class="st1" width="16" height="16"/>
+<rect x="40" y="8" class="st1" width="16" height="16"/>
+<rect x="8" y="24" class="st1" width="16" height="16"/>
+<rect x="24" y="24" class="st1" width="16" height="16"/>
+<rect x="40" y="24" class="st1" width="16" height="16"/>
+<rect x="8" y="40" class="st1" width="16" height="16"/>
+<rect x="24" y="40" class="st1" width="16" height="16"/>
+<rect x="40" y="40" class="st1" width="16" height="16"/>
+
+<polygon class="st2" points="40,24 44,16 48,24 48,48 40,48"/>
+<line class="st2" x1="40" y1="24" x2="48" y2="24"/>
+<line class="st2" x1="40" y1="40" x2="48" y2="40"/>
 </svg>

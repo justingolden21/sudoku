@@ -1,10 +1,12 @@
 ==== TODO ====
 
+store difficulty in link
+
 option to print out a certain number of puzzles, for example 100
 
 onload focus the first non disabled input
 
-icon and favicon, mobile theme colors, more meta elements in html head
+enter on checkbox should work
 
 ==== NOTES ====
 
@@ -26,6 +28,12 @@ include option to change font
 enter custom puzzle difficulty
 
 option to use cookies to remember puzzle and progress
+
+==== CSS ====
+
+fix checkbox and square whitespace aesthetics
+
+change focus color or outline width
 
 ==== MAYBE LATER ====
 

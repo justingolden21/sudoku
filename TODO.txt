@@ -28,3 +28,5 @@ include option to change font
 onload focus the first non disabled input
 
 icon and favicon, mobile theme colors, more meta elements in html head
+
+option for onscreen keyboard buttons for numbers 1-9

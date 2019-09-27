@@ -3,17 +3,15 @@
 <head>
 	<title>Sudoku</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<!-- <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Orbitron:400,700,900" rel="stylesheet">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Orbitron|Permanent+Marker|Gloria+Hallelujah" rel="stylesheet"> -->
+
 	<script src="sudoku.js"></script>
 	<link rel="stylesheet" href="styles.css">
+	<link id="invalid-css" rel="stylesheet" href="invalid.css">
 	<script src="links.js"></script>
 	<script src="scripts.js"></script>
-	
 </head>
 <body>
 
@@ -35,6 +33,10 @@
 <button id="solve-btn">Solve</button>
 <button id="print-btn">Print</button>
 <button id="link-btn">Get Link</button>
+<br>
+
+<input checked id="show-invalid-checkbox" type="checkbox">
+<label for="show-invalid-checkbox">Show Invalid Squares</label>
 
 </body>
 </html>

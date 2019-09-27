@@ -24,9 +24,6 @@ input:disabled {
 	font-weight: 900;
 	color: #666;
 }
-input.invalid {
-	background: #c66;
-}
 input.won {
 	background: #6c6;
 }

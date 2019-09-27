@@ -8,6 +8,8 @@ $(function() {
 	makeBoard();
 
 	$('input').change(function() {
+		if($(this).val()<1 || $(this).val()>9)
+			$(this).val('');
 		checkValids();
 		if(checkWon() ) {
 			$('input').addClass('won');
@@ -37,14 +39,16 @@ $(function() {
 
 	$('#solve-btn').click(solve);
 	$('#reset-btn').click(reset);
-	$('#print-btn').click(function() {
-		window.print();
-	});
-
+	$('#print-btn').click( ()=> window.print() );
 
 	setupLinkButton();
 
 	checkLoadLink();
+
+	$('#show-invalid-checkbox').change( ()=> {
+		let displayInvalid = $('#show-invalid-checkbox').is(':checked');
+		$('#invalid-css').prop('href', displayInvalid ? 'invalid.css' : ' ');
+	});
 
 });
 

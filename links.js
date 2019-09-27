@@ -28,8 +28,12 @@ function setupLinkButton() {
 function checkLoadLink() {
 	let url = new URL(window.location.href);
 	let p = url.searchParams.get('p');
-	if(p)
+	if(p) {
 		setPuzzle(p);
-	else
+		linkParams = true;
+		$('#link-btn').html('Remove link');
+	}
+	else {
 		setDifficulty('easy');
+	}
 }

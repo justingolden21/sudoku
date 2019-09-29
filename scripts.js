@@ -34,6 +34,9 @@ $(function() {
 		let displayInvalid = $('#show-invalid-checkbox').is(':checked');
 		$('#invalid-css').prop('href', displayInvalid ? 'invalid.css' : ' ');
 	});
+
+	// focus the first non disabled square (should be self-explanatory)
+	$('.square:not([disabled]):first').focus();
 });
 
 function setDifficulty(difficulty) {

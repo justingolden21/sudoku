@@ -3,7 +3,7 @@
 let puzzle, d;
 const difficulties = 'easy medium hard very-hard insane inhuman'.split(' ');
 
-$(function() {
+$( ()=> {
 	makeBoard();
 
 	$('.square').change(function() {
@@ -33,6 +33,12 @@ $(function() {
 	$('#show-invalid-checkbox').change( ()=> {
 		let displayInvalid = $('#show-invalid-checkbox').is(':checked');
 		$('#invalid-css').prop('href', displayInvalid ? 'invalid.css' : ' ');
+	});
+
+	// enter key toggles checkbox (if focused)
+	$('input:checkbox').keypress(function(evt) {
+		if( (evt.keyCode ? evt.keyCode : evt.which) == 13)
+			$(this).click();
 	});
 
 	// focus the first non disabled square (should be self-explanatory)

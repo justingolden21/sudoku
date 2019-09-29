@@ -4,8 +4,6 @@ store difficulty in link
 
 option to print out a certain number of puzzles, for example 100
 
-enter on checkbox should work
-
 ==== NOTES ====
 
 puzzle difficuty:

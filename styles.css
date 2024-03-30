@@ -61,9 +61,15 @@ button:hover {
 	.square {
 		width: 30px;
 		height: 30px;
-		font-size: 150%;
+		font-size: 125%;
+		border-width: 1px;
 	}
 	button {
 		padding: 5px;
+	}
+}
+@media print {
+	h3:nth-child(2), button, input[type=checkbox], label {
+		display: none;
 	}
 }
